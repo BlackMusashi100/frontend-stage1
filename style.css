@@ -1,0 +1,61 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Background color for the entire page */
+}
+
+/* Style the Slack Name */
+h1[data-testid="slackUserName"] {
+    font-size: 24px;
+    color: #333; /* Text color for the Slack Name */
+    margin: 20px 0; /* Add margin to create spacing */
+    text-align: center; /* Center align the text */
+}
+
+/* Style the Slack Display Picture */
+img[data-testid="slackDisplayImage"] {
+    display: block; /* Remove any extra spacing around the image */
+    margin: 0 auto; /* Center align the image */
+    border-radius: 50%; /* Make it a circular image */
+    max-width: 200px; /* Set a maximum width for the image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow to the image */
+}
+
+/* Style the currentDayOfTheWeek paragraph */
+p[data-testid="currentDayOfTheWeek"] {
+    font-size: 18px;
+    color: #666; /* Text color for the day of the week */
+    text-align: center; /* Center align the text */
+}
+
+/* Style the currentUTCTime div */
+div[data-testid="currentUTCTime"] {
+    font-size: 16px;
+    color: #777; /* Text color for the UTC time */
+    text-align: center; /* Center align the text */
+}
+
+/* Style the Track paragraph */
+p[data-testid="myTrack"] {
+    font-size: 18px;
+    color: #333; /* Text color for the track */
+    text-align: center; /* Center align the text */
+    margin-top: 20px; /* Add margin to create spacing */
+}
+
+/* Style the GitHub URL link */
+a[data-testid="githubURL"] {
+    display: block; /* Make it a block-level element for spacing */
+    text-align: center; /* Center align the link */
+    font-size: 16px;
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underlines from the link */
+    margin-top: 10px; /* Add margin to create spacing */
+}
+
+/* Change link color on hover */
+a[data-testid="githubURL"]:hover {
+    color: #0056b3; /* Change link color on hover */
+}

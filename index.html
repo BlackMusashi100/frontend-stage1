@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Slack Profile</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Slack Name -->
+    <h1 data-testid="slackUserName">Black Musashi</h1>
+
+    <!-- Slack Display Picture -->
+    <img src="images/IMG_20210625_155101_000.jpg" alt="Black Musashi" data-testid="slackDisplayImage">
+
+    <p data-testid="currentDayOfTheWeek" id="dayOfWeek"></p>
+
+    <!-- HTML -->
+<p data-testid="currentDayOfTheWeek" id="dayOfWeek"></p>
+
+<!-- JavaScript -->
+<script>
+    // Get the current date
+    const currentDate = new Date();
+
+    // Days of the week array
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    // Get the current day of the week (0-6)
+    const currentDayIndex = currentDate.getDay();
+
+    // Use the index to get the day name from the array
+    const currentDay = daysOfWeek[currentDayIndex];
+
+    // Display the current day in the HTML element
+    document.getElementById("dayOfWeek").textContent = currentDay;
+</script>
+
+    <div data-testid="currentUTCTime">
+        <!-- This will be replaced by JavaScript -->
+    </div>
+
+    <script>
+        function updateUTCTime() {
+            const currentUTCTimeMilliseconds = Date.now();
+            const utcTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+            utcTimeElement.textContent = `Current UTC Time (Milliseconds): ${currentUTCTimeMilliseconds}`;
+        }
+
+        // Update the UTC time initially and then every second
+        updateUTCTime();
+        setInterval(updateUTCTime, 1000);
+    </script>
+
+    <!-- Track -->
+    <p data-testid="myTrack">Frontend</p>
+
+    <!-- GitHub URL -->
+    <a href="https://github.com/BlackMusashi100/frontend-stage1" data-testid="githubURL">GitHub Repository</a>
+
+
+
+
+</body>
+</html>
